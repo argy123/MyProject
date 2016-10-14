@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#the repository in git must have the same name as the project
+#use only remote name origin
+dir=$(pwd)
+cd $dir
+git init 
+project="${dir##*/}"
+git remote add origin https://github.com/argy123/"$project".git
+
+
+echo pushing the changes ...
+
+./pushChanges
