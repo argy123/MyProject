@@ -13,7 +13,7 @@ import backtype.storm.topology.TopologyBuilder;
 import backtype.storm.utils.Utils;
 
 
-public class HelloWorldTopology {
+public class MyTopology {
 
 	/**
 	 * @param args
@@ -23,8 +23,8 @@ public class HelloWorldTopology {
 	public static void main(String[] args ) throws AlreadyAliveException, InvalidTopologyException {
 		
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("randomHelloWorld", new HelloWorldSpout(), 1);
-		builder.setBolt("HelloWorldBolt", new HelloWorldBolt(), 1).shuffleGrouping("randomHelloWorld");
+		builder.setSpout("randomTuples", new StreamTuplesSpout(), 1);
+		builder.setBolt("MachLearn1", new MachLearn1(), 1).shuffleGrouping("randomTuples");
 		Config conf = new Config();
 		conf.setDebug(true);
 		

@@ -9,7 +9,7 @@ import backtype.storm.topology.base.BaseRichBolt;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 
-public class HelloWorldBolt extends BaseRichBolt{
+public class MachLearn1 extends BaseRichBolt{
 
 	@Override
 	public void prepare(Map stormConf, TopologyContext context,OutputCollector collector) {

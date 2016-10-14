@@ -8,4 +8,4 @@ echo give the branch you want commit changes to
 read b
 git push origin $b
 
-
+read r

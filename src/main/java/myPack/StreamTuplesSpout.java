@@ -13,14 +13,14 @@ import backtype.storm.utils.Utils;
 
 
 
-public class HelloWorldSpout extends BaseRichSpout{
+public class StreamTuplesSpout extends BaseRichSpout{
 	
 	private SpoutOutputCollector collector;
 	private int referenceRandom;
 	private static final int MAX_RANDOM = 10;
 	
 	
-	public HelloWorldSpout(){
+	public StreamTuplesSpout(){
 	final Random rand = new Random();
 	referenceRandom = rand.nextInt(MAX_RANDOM);
 	}

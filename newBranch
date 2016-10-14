@@ -23,3 +23,5 @@ if [ "$r" = "y" ]; then
  git commit -m "new commit"
  git push origin "$nb"
 fi
+
+read r
